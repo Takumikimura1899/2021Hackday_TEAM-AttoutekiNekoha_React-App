@@ -1,5 +1,5 @@
-import 'bulma/css/bulma.min.css';
 import { useState, useRef } from 'react';
+import 'bulma/css/bulma.min.css';
 import Popup from 'reactjs-popup';
 import SignaturePad from 'react-signature-canvas';
 
@@ -61,7 +61,7 @@ function App() {
         <br />
         <br />
         {/* if our we have a non-null image url we should
-      show an image and pass our imageURL state to it*/}
+      show an image and pass our imageURL state to it */}
       </div>
       {imageURL ? (
         <img

@@ -17,7 +17,7 @@ const SignatureCanvas = () => {
   const save = () =>
     setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'));
   return (
-    <div className='App'>
+    <div className="App">
       <h1>Signature Pad Example</h1>
       <Popup
         modal
@@ -46,7 +46,7 @@ const SignatureCanvas = () => {
       {imageURL ? (
         <img
           src={imageURL}
-          alt='my signature'
+          alt="my signature"
           style={{
             display: 'block',
             margin: '0 auto',
