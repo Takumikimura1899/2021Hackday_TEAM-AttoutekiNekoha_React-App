@@ -18,25 +18,25 @@ function App() {
   const save = () =>
     setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'));
   return (
-    <div className='App'>
-      <section className='section'>
-        <div className='container'>
-          <h1 className='title'>Hello World</h1>
-          <p className='subtitle'>
+    <div className="App">
+      <section className="section">
+        <div className="container">
+          <h1 className="title">Hello World</h1>
+          <p className="subtitle">
             My first website with <strong>Bulma</strong>!
           </p>
         </div>
       </section>
       <div>
-        <button className='button is-primary is-medium'>button</button>
-        <button className='button is-success is-large' type='submit'>
+        <button className="button is-primary is-medium">button</button>
+        <button className="button is-success is-large" type="submit">
           button
         </button>
-        <button className='button is-warning is-small' type='reset'>
+        <button className="button is-warning is-small" type="reset">
           button
         </button>
       </div>
-      <div className='container'>
+      <div className="container">
         <h1>Signature Pad Example</h1>
         <Popup
           modal
@@ -66,7 +66,7 @@ function App() {
       {imageURL ? (
         <img
           src={imageURL}
-          alt='my signature'
+          alt="my signature"
           style={{
             display: 'block',
             margin: '0 auto',
