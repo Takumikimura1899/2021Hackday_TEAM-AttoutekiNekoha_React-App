@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const App = () => {
   const [text, setText] = useState('');
   const [localStorageContents, setLocalStorageContents] = useState([]);
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem('contents')) {
@@ -34,6 +35,13 @@ const App = () => {
     const getLocalStorageContents = localStorage.getItem('contents');
     setLocalStorageContents(JSON.parse(getLocalStorageContents));
     setText('');
+  };
+  console.log(localStorageContents.length);
+
+  const explosionButton = () => {
+    if (localStorageContents.length === 3) {
+      setDisabled(false);
+    }
   };
 
   return (
@@ -90,8 +98,14 @@ const App = () => {
 
       <section className="section">
         <div className="bomb is-grouped is-grouped-centered">
-          <button className="bomb button is-danger is-clickable is-rounded">
-            <Link to="/explosion">爆破</Link>
+          <button
+            className="bomb button is-danger is-clickable is-rounded"
+            onClick={explosionButton}
+            disabled={disabled}
+          >
+            <Link className="disabled-link" to="/explosion">
+              爆破
+            </Link>
           </button>
         </div>
       </section>
