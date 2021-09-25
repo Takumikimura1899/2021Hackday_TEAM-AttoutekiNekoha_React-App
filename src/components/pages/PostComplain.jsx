@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
 
-import './App.css';
-
-const App = () => {
+const PostComplain = () => {
   const [text, setText] = useState('');
   const [localStorageContents, setLocalStorageContents] = useState([]);
 
@@ -49,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default PostComplain;
