@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LinkToTopButton = () => {
   const onClick = () => {
-    localStorage.clear();
+    localStorage.removeItem('contents');
   };
   return (
     <>
