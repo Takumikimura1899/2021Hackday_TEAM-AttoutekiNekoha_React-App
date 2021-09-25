@@ -1,35 +1,35 @@
-  .fixed{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin:auto;
-    padding:0;
-  }
-  
-  .button{
-    width:20vw;
-  }
+.fixed {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
 
- .input{
-    border-radius: 8px;
-    width:80%;
-  }
+.button {
+  width: 20vw;
+}
 
- .postBtn{
+.input {
+  border-radius: 8px;
+  width: 80%;
+}
+
+.postBtn {
   width: 20%;
 }
-.field{
+.field {
   width: 100%;
 }
-  .form-size{
-    max-width:700px;
-    height:60px;
-    padding: 20px;
-  }
-.footer{
+.form-size {
+  max-width: 700px;
+  height: 60px;
+  padding: 20px;
+}
+.footer {
   max-height: 100px;
   padding: 0;
 }
-.center{
-  padding-top:100px;
+.center {
+  padding-top: 100px;
 }

@@ -19,9 +19,6 @@ const App = () => {
     }
   }, []);
 
-  if (localStorageContents.length === 4) {
-  }
-
   return (
     <div className="App mx-6 ">
       <section className="section"></section>
