@@ -3,6 +3,7 @@ import GifPlayer from 'react-gif-player';
 import recipeGif from '../static/recipeApp.gif';
 import { Link } from 'react-router-dom';
 import './explosion.css';
+import LinkToTopButton from '../components/molecules/LinkToTopButton'
 
 export const ExplosionPage = () => {
   const [localStorageContents, setLocalStorageContents] = useState(
@@ -31,9 +32,7 @@ export const ExplosionPage = () => {
           <p className="text4">{localStorageContents[3].value}</p>
         </div>
         <div className="has-text-centered">
-          <button className="button is-warning">
-            <Link to="/">TopPageに戻る</Link>
-          </button>
+          <LinkToTopButton />
         </div>
       </div>
     </>
