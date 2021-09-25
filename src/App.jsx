@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import 'bulma/css/bulma.min.css';
 import Popup from 'reactjs-popup';
 import SignaturePad from 'react-signature-canvas';
-
 import './App.css';
 
 function App() {
@@ -17,18 +16,22 @@ function App() {
         state */
   const save = () =>
     setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'));
+
   return (
     <div className="App">
       <section className="section">
         <div className="container">
           <h1 className="title">Hello World</h1>
           <p className="subtitle">
-            My first website with <strong>Bulma</strong>!
+            My first website with
+            <strong>Bulma</strong>
           </p>
         </div>
       </section>
       <div>
-        <button className="button is-primary is-medium">button</button>
+        <button type="button" className="button is-primary is-medium">
+          button
+        </button>
         <button className="button is-success is-large" type="submit">
           button
         </button>
