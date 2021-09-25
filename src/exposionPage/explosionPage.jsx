@@ -8,7 +8,7 @@ export const explosionPage = () => {
     <>
       <div className="explosion">
         <GifPlayer gif={recipeGif} autoplay />
-        <p>ふざけんなこの野郎</p>
+        <p id="textAnim">ふざけんなこの野郎</p>
       </div>
       <div className="has-text-centered">
         <button className="button is-warning">

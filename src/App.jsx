@@ -1,41 +1,96 @@
+import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
 import './App.css';
 import { Link } from 'react-router-dom';
 
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const App = () => {
+  const [text, setText] = useState('');
+  const [localStorageContents, setLocalStorageContents] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem('contents')) {
+      const getLocalStorageContents = localStorage.getItem('contents');
+      setLocalStorageContents(JSON.parse(getLocalStorageContents));
+    }
+  }, []);
+
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!text) return;
+
+    const newTodo = {
+      value: text,
+      id: new Date().getTime(),
+    };
+
+    const newTodos = [newTodo, ...localStorageContents];
+    localStorage.setItem('contents', JSON.stringify(newTodos));
+    const getLocalStorageContents = localStorage.getItem('contents');
+    setLocalStorageContents(JSON.parse(getLocalStorageContents));
+    setText('');
+  };
+
   return (
-    <div className="App">
+    <div className="App mx-6">
       <section className="section">
-        <div className="container">
-          <h1 className="title">ペーパーレス爆破</h1>
-          <p className="subtitle">
-            <strong>CO2</strong>も出しません。
-          </p>
+        <div className="container m-auto mx-5">
+          <h1 className="title ">
+            あなたの気持ちに、<strong>チャッカマン。</strong>
+          </h1>
         </div>
       </section>
-
-      <section className="section">
-        <div className="field columns is-grouped is-grouped-centerd">
-          <p className="form-label">不満</p>
-          <input className="column" />
-          <button type="button" className="button is-primary is-medium">
-            投稿
-          </button>
-        </div>
+      <section>
+        {/* <i><FontAwesomeIcon icon="fa-solid fa-1"/>aaaaaa</i> */}
+        <section className="section box has-background-grey-dark box-radius-3">
+          <form
+            action="submit"
+            onSubmit={handleSubmit}
+            className="field columns is-grouped is-grouped-centered"
+          >
+            <input
+              type="text"
+              value={text}
+              onChange={onChange}
+              placeholder="あなたの愚痴をお聞かせください"
+              className="column ml-6 "
+            />
+            <button
+              type="submit"
+              value="追加"
+              onSubmit={(e) => e.preventDefault()}
+              className="ml-3 mr-5 button is-success is-outlined is-outlined is-medium is-rounded"
+            >
+              投稿
+            </button>
+          </form>
+        </section>
       </section>
-
       <section className="section">
         <div className="posts">
-          <div className="text is-grouped is-centerd">
-            <p>sample</p>
-            <p>sample</p>
+          <div className="columns text is-grouped is-flex is-justify-content-center is-vcentered is-centered">
+            {localStorageContents.map((todo) => {
+              return (
+                <p
+                  className="box column is-5 ml-6 has-text-centered mb-2 mr-1"
+                  key={todo.id}
+                >
+                  {todo.value}
+                </p>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="bomb is-grouped is-grouped-centerd">
-          <button className="button is-danger">
+        <div className="bomb is-grouped is-grouped-centered">
+          <button className="bomb button is-danger is-clickable is-rounded">
             <Link to="/explosion">爆破</Link>
           </button>
         </div>
@@ -43,4 +98,5 @@ const App = () => {
     </div>
   );
 };
+
 export default App;

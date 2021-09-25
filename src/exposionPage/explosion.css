@@ -13,4 +13,43 @@
   margin: 0;
   padding: 0;
   font-size: 30px;
+  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: hideop 3.5s linear 0s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes hideop {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
