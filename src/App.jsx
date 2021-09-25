@@ -1,7 +1,8 @@
 import 'bulma/css/bulma.min.css';
 import './App.css';
+import { Link } from 'react-router-dom';
 
-const App=()=> {
+const App = () => {
   return (
     <div className="App">
       <section className="section">
@@ -16,12 +17,11 @@ const App=()=> {
       <section className="section">
         <div className="field columns is-grouped is-grouped-centerd">
           <p className="form-label">不満</p>
-          <input className="column"/>
+          <input className="column" />
           <button type="button" className="button is-primary is-medium">
             投稿
           </button>
         </div>
-
       </section>
 
       <section className="section">
@@ -31,18 +31,16 @@ const App=()=> {
             <p>sample</p>
           </div>
         </div>
-
       </section>
 
       <section className="section">
         <div className="bomb is-grouped is-grouped-centerd">
           <button className="button is-danger">
-            爆破
+            <Link to="/explosion">爆破</Link>
           </button>
         </div>
-
       </section>
     </div>
   );
-  }
+};
 export default App;

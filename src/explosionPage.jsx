@@ -1,13 +1,13 @@
-import GifPlayer from 'react-dom';
+import GifPlayer from 'react-gif-player';
 import recipeGif from './static/recipeApp.gif';
 
-function explosionPage() {
+export const explosionPage = () => {
   return (
     <>
-      <h1>爆発画面</h1>
-      <GifPlayer gif={recipeGif} />
+      <GifPlayer gif={recipeGif} autoplay={true} />
+      <div className="has-text-centered">
+        <button className="button is-warning">TopPageに戻る</button>
+      </div>
     </>
   );
-}
-
-export default explosionPage;
+};
