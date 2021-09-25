@@ -1,0 +1,40 @@
+
+.disabled-link {
+  pointer-events: none;
+}
+  .fixed{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    padding:0;
+  }
+  
+  .button{
+    width:20vw;
+  }
+
+ .input{
+    border-radius: 8px;
+    width:80%;
+  }
+
+ .postBtn{
+  width: 20%;
+}
+.field{
+  width: 100%;
+}
+  .form-size{
+    max-width:700px;
+    height:60px;
+    padding: 20px;
+  }
+.footer{
+  max-height: 100px;
+  padding: 0;
+}
+.center{
+  padding-top:100px;
+
+}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
+import './PostComplain.css' 
 
 const PostComplain = () => {
   const [text, setText] = useState('');
@@ -34,45 +35,23 @@ const PostComplain = () => {
 
   return (
     <section>
-        <section className="section box has-background-grey-dark box-radius-3">
-          <form
-            action="submit"
-            onSubmit={handleSubmit}
-            className="field columns is-grouped is-grouped-centered"
-          >
-            <input
-              type="text"
-              value={text}
-              onChange={onChange}
-              placeholder="あなたの愚痴をお聞かせください"
-              className="column ml-6 "
-            />
-            <button
-              type="submit"
-              value="追加"
-              onSubmit={(e) => e.preventDefault()}
-              className="ml-3 mr-5 button is-success is-outlined is-outlined is-medium is-rounded"
-            >
-              投稿
-            </button>
-          </form>
-        </section>
-
-  <div className="posts">
-    <div className="columns text is-grouped is-flex is-justify-content-center is-vcentered is-centered">
-      {localStorageContents.map((todo) => {
-        return (
-          <p
-            className="box column is-5 ml-6 has-text-centered mb-2 mr-1"
-            key={todo.id}
-          >
-            {todo.value}
-          </p>
-        );
-      })}
-    </div>
-  </div>
-
+      <div className="form-size section box has-background-grey-dark is-flex is-justify-content-center m-auto">
+        <form action="submit" onSubmit={handleSubmit} className="field columns is-flex is-vcentered">
+          <input type="text" value={text} onChange={onChange} placeholder="愚痴を、どうぞ。"className="input column ml-6 is-success"/>
+          <button value="追加" onSubmit={(e) => e.preventDefault()}  type="submit" className="postBtn ml-3 mr-5 button is-success is-outlined is-normal is-rounded">追加</button>
+        </form>
+      </div>
+    <section className="imagefix is-flex is-justify-content-center is-full">
+      <section className="section image">
+        <div className="posts">
+          <div className="columns text is-grouped is-flex is-flex-wrap-wrap is-flex-direction-column is-align-items-center is-centered">
+            {localStorageContents.map((todo) => {
+              return <p className="todos box column is-5 has-text-centered mb-2 is-full" key={todo.id}>{todo.value}</p>;
+            })}
+          </div>
+        </div>
+      </section>
+    </section>
   </section>
   );
 };
