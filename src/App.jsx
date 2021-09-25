@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
 import './App.css';
+import { Link } from 'react-router-dom';
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const App = () => {
@@ -62,7 +64,6 @@ const App = () => {
               type="submit"
               value="追加"
               onSubmit={(e) => e.preventDefault()}
-              type="submit"
               className="ml-3 mr-5 button is-success is-outlined is-outlined is-medium is-rounded"
             >
               投稿
@@ -90,7 +91,7 @@ const App = () => {
       <section className="section">
         <div className="bomb is-grouped is-grouped-centered">
           <button className="bomb button is-danger is-clickable is-rounded">
-            爆破
+            <Link to="/explosion">爆破</Link>
           </button>
         </div>
       </section>

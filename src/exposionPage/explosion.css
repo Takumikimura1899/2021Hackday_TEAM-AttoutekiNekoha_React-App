@@ -1,0 +1,107 @@
+.explosion {
+  position: relative;
+}
+
+.text1 {
+  position: absolute;
+  color: gray;
+  font-weight: bold;
+  top: 30%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: hideop 1.5s linear 0s;
+  animation-fill-mode: forwards;
+}
+.text2 {
+  position: absolute;
+  color: gray;
+  font-weight: bold;
+  top: 30%;
+  left: 70%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: hideop 1.5s linear 0s;
+  animation-fill-mode: forwards;
+}
+.text3 {
+  position: absolute;
+  color: gray;
+  font-weight: bold;
+  top: 70%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: hideop 1.5s linear 0s;
+  animation-fill-mode: forwards;
+}
+.text4 {
+  position: absolute;
+  color: gray;
+  font-weight: bold;
+  top: 70%;
+  left: 70%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: hideop 1.5s linear 0s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes hideop {
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
