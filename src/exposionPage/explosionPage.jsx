@@ -31,7 +31,7 @@ export const ExplosionPage = () => {
           <GifPlayer gif={recipeGif} autoplay />
           {shuffleArray.map((todo, index) => {
             return (
-              <p key={todo.id} className={`text${index}`}>
+              <p key={todo.id} className={`text${index + 1}`}>
                 {todo.value}
               </p>
             );
