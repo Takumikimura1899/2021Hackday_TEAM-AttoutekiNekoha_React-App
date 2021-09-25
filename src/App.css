@@ -26,13 +26,6 @@
     height:60px;
     padding: 20px;
   }
-
-.main{
-  min-height: 600px;
-  background-image: url('img/neko.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .footer{
   max-height: 100px;
   padding: 0;

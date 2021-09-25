@@ -23,12 +23,9 @@ const App = () => {
   return (
     <div className="App mx-6 ">
       <section className="section">
-        <div className="container is-flex is-justify-content-center m-auto mx-5">
-          <h1 className="title has-text-weight-light is-family-primary">あなたの心に、チャッカマン。</h1>
-        </div>
       </section>
-
-      <PostComplain />
+    <section className="container picture">
+      <PostComplain/>
 
       <section className="fixed section">
         <div className="columns is-flex is-flex-direction-column is-justify-content-center ">
@@ -37,7 +34,13 @@ const App = () => {
           </button>
           <button onClick={clear} className="mt-2 clear button column is-medium is-primary is-outlined">RESET</button>
         </div>
-      </section>
+    </section>
+    </section>
+      <section className="section">
+      <div className="footer is-flex is-justify-content-center">
+  <p className="is-size-7 has-text-weight-light">© 2021 あなたの心に、チャッカマン。All Rights Reserved.</p>
+</div>
+</section>
     </div>
   );
 };

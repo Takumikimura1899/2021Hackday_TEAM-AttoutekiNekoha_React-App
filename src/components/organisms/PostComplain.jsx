@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
+import './PostComplain.css' 
 
 const PostComplain = () => {
   const [text, setText] = useState('');
@@ -40,17 +41,17 @@ const PostComplain = () => {
           <button value="追加" onSubmit={(e) => e.preventDefault()}  type="submit" className="postBtn ml-3 mr-5 button is-success is-outlined is-normal is-rounded">追加</button>
         </form>
       </div>
-
-      <section className="section">
+    <section className="imagefix is-flex is-justify-content-center is-full">
+      <section className="section image">
         <div className="posts">
           <div className="columns text is-grouped is-flex is-flex-wrap-wrap is-flex-direction-column is-align-items-center is-centered">
             {localStorageContents.map((todo) => {
-              return <p className="box column is-5 has-text-centered mb-2 is-full" key={todo.id}>{todo.value}</p>;
+              return <p className="todos box column is-5 has-text-centered mb-2 is-full" key={todo.id}>{todo.value}</p>;
             })}
           </div>
         </div>
       </section>
-
+    </section>
   </section>
   );
 };
