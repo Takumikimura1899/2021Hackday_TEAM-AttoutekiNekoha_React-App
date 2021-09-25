@@ -10,7 +10,7 @@ const clear=()=>{
 }
 
 const App = () => {
-  // const [text, setText] = useState('');
+  const [text, setText] = useState('');
   const [localStorageContents, setLocalStorageContents] = useState([]);
 
   useEffect(() => {
@@ -29,9 +29,7 @@ const App = () => {
 
       <section className="fixed section">
         <div className="columns is-flex is-flex-direction-column is-justify-content-center ">
-          <button className="is-danger is-outlined column is-medium button">
-            <Link to="/explosion">爆破</Link>
-          </button>
+          <Link to="/explosion" className="is-danger is-outlined column is-medium button">爆破</Link>
           <button onClick={clear} className="mt-2 clear button column is-medium is-primary is-outlined">RESET</button>
         </div>
     </section>
