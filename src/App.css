@@ -1,3 +1,7 @@
+
+.disabled-link {
+  pointer-events: none;
+
   .fixed{
     width: 100%;
     display: flex;
@@ -32,4 +36,5 @@
 }
 .center{
   padding-top:100px;
+
 }
