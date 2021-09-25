@@ -13,6 +13,27 @@ const PostComplain = () => {
     }
   }, []);
 
+  const [disable,setDisable]=useState(false)
+  
+  const image = document.getElementById("aaa")
+  const num = localStorageContents.length
+  const [images,setImages]=useState(num + 1)
+  
+  const countDown = () => {
+  setImages(images + 1)
+  console.log(images)
+  if(images===1)
+    {image.classList.add("image0")
+  } else if (images === 2){
+    image.classList.add("image1")
+  } else if (images === 3){
+    image.classList.add("image2")
+  } else if (images >= 4){
+    image.classList.add("image3")
+    setDisable(true)
+  }
+}
+
   const onChange = (e) => {
     setText(e.target.value);
   };
@@ -35,14 +56,14 @@ const PostComplain = () => {
 
   return (
     <section>
-      <div className="form-size section box has-background-grey-dark is-flex is-justify-content-center m-auto">
+      <div className="form-size section box has-background-white is-shadowless is-flex is-justify-content-center m-auto">
         <form action="submit" onSubmit={handleSubmit} className="field columns is-flex is-vcentered">
-          <input type="text" value={text} onChange={onChange} placeholder="愚痴を、どうぞ。"className="input column ml-6 is-success"/>
-          <button value="追加" onSubmit={(e) => e.preventDefault()}  type="submit" className="postBtn ml-3 mr-5 button is-success is-outlined is-normal is-rounded">追加</button>
+          <input type="text" value={text} onChange={onChange} placeholder="愚痴を、どうぞ。"className="input  column ml-6 is-success"/>
+          <button onClick={countDown} id="adding" value="追加" onSubmit={(e) => e.preventDefault()} type="submit" className="postBtn ml-3 mr-5 button is-success is-outlined is-normal is-rounded" disabled={disable}>追加</button>
         </form>
       </div>
     <section className="imagefix is-flex is-justify-content-center is-full">
-      <section className="section image">
+      <section id="aaa" className="section image">
         <div className="posts">
           <div className="columns text is-grouped is-flex is-flex-wrap-wrap is-flex-direction-column is-align-items-center is-centered">
             {localStorageContents.map((todo) => {
