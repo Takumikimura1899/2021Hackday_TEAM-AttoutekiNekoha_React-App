@@ -1,0 +1,21 @@
+.image{
+    min-height: 600px;
+    max-height: 1200px;
+    background-image: url('../../img/neko.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width:800px;
+    resize: horizontal;
+}
+
+.todos{
+  background-color:rgba(255, 255, 255, 0.8);
+}
+
+.posts{
+  margin-top: 15vh;
+}
+
+.imagefix{
+  margin: 0;
+}
