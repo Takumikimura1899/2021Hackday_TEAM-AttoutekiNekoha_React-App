@@ -5,8 +5,12 @@ import PostComplain from './components/organisms/PostComplain';
 import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const clear=()=>{
+  localStorage.clear();
+}
+
 const App = () => {
-  const [text, setText] = useState('');
+  // const [text, setText] = useState('');
   const [localStorageContents, setLocalStorageContents] = useState([]);
 
   useEffect(() => {
@@ -16,25 +20,19 @@ const App = () => {
     }
   }, []);
 
-  const clear =()=>{
-    localStorage.clear()
-  }
-
   return (
     <div className="App mx-6 ">
       <section className="section">
-        <div className="container m-auto mx-5">
-          <h1 className="title ">
-            あなたの心に、<strong>チャッカマン。</strong>
-          </h1>
+        <div className="container is-flex is-justify-content-center m-auto mx-5">
+          <h1 className="title has-text-weight-light is-family-primary">あなたの心に、チャッカマン。</h1>
         </div>
       </section>
 
       <PostComplain />
 
-      <section className="section">
-        <div className="bomb is-grouped is-grouped-centered">
-          <button className="bomb button is-danger is-clickable is-rounded">
+      <section className="fixed section">
+        <div className="columns is-flex is-flex-direction-column is-justify-content-center ">
+          <button className="is-danger is-outlined column is-medium button">
             <Link to="/explosion">爆破</Link>
           </button>
           <button onClick={clear} className="mt-2 clear button column is-medium is-primary is-outlined">RESET</button>
