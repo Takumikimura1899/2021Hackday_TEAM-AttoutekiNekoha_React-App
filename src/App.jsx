@@ -1,48 +1,41 @@
+import { useState, useEffect } from 'react';
 import 'bulma/css/bulma.min.css';
-
 import './App.css';
 import PostComplain from './components/organisms/PostComplain';
+import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const App = () => {
+  const [text, setText] = useState('');
+  const [localStorageContents, setLocalStorageContents] = useState([]);
+
+  useEffect(() => {
+    if (localStorage.getItem('contents')) {
+      const getLocalStorageContents = localStorage.getItem('contents');
+      setLocalStorageContents(JSON.parse(getLocalStorageContents));
+    }
+  }, []);
+
   return (
-    <>
-      <div className="App">
-        <section className="section">
-          <div className="container">
-            <h1 className="title">ペーパーレス爆破</h1>
-            <p className="subtitle">
-              <strong>CO2</strong>も出しません。
-            </p>
-          </div>
-        </section>
+    <div className="App mx-6">
+      <section className="section">
+        <div className="container m-auto mx-5">
+          <h1 className="title ">
+            あなたの気持ちに、<strong>チャッカマン。</strong>
+          </h1>
+        </div>
+      </section>
 
-        <section className="section">
-          <div className="field columns is-grouped is-grouped-centerd">
-            <p className="form-label">不満</p>
-            <input className="column" />
-            <button type="button" className="button is-primary is-medium">
-              投稿
-            </button>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="posts">
-            <div className="text is-grouped is-centerd">
-              <p>sample</p>
-              <p>sample</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="bomb is-grouped is-grouped-centerd">
-            <button className="button is-danger">爆破</button>
-          </div>
-        </section>
-      </div>
       <PostComplain />
-    </>
+
+      <section className="section">
+        <div className="bomb is-grouped is-grouped-centered">
+          <button className="bomb button is-danger is-clickable is-rounded">
+            <Link to="/explosion">爆破</Link>
+          </button>
+        </div>
+      </section>
+    </div>
   );
 };
 
