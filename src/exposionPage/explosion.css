@@ -6,12 +6,10 @@ main {
   position: relative;
 }
 
-.text1 {
+.text1, .text2, .text3, .text4 {
   position: absolute;
   color: gray;
   font-weight: bold;
-  top: 30%;
-  left: 30%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -23,60 +21,23 @@ main {
   animation: hideop 1.5s linear 0s;
   animation-fill-mode: forwards;
   max-width: 200px;
+}
+
+.text1 {
+  top: 30%;
+  left: 30%;
 }
 .text2 {
-  position: absolute;
-  color: gray;
-  font-weight: bold;
   top: 30%;
   left: 70%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: hideop 1.5s linear 0s;
-  animation-fill-mode: forwards;
-  max-width: 200px;
 }
 .text3 {
-  position: absolute;
-  color: gray;
-  font-weight: bold;
   top: 70%;
   left: 30%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: hideop 1.5s linear 0s;
-  animation-fill-mode: forwards;
-  max-width: 200px;
 }
 .text4 {
-  position: absolute;
-  color: gray;
-  font-weight: bold;
   top: 70%;
   left: 70%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  -webkit-animation: text-focus-in 6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: hideop 1.5s linear 0s;
-  animation-fill-mode: forwards;
-  max-width: 200px;
 }
 
 @-webkit-keyframes text-focus-in {
