@@ -22,6 +22,7 @@ main {
   animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: hideop 1.5s linear 0s;
   animation-fill-mode: forwards;
+  max-width: 200px;
 }
 .text2 {
   position: absolute;
@@ -39,6 +40,7 @@ main {
   animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: hideop 1.5s linear 0s;
   animation-fill-mode: forwards;
+  max-width: 200px;
 }
 .text3 {
   position: absolute;
@@ -56,6 +58,7 @@ main {
   animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: hideop 1.5s linear 0s;
   animation-fill-mode: forwards;
+  max-width: 200px;
 }
 .text4 {
   position: absolute;
@@ -73,6 +76,7 @@ main {
   animation: text-focus-in 2.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: hideop 1.5s linear 0s;
   animation-fill-mode: forwards;
+  max-width: 200px;
 }
 
 @-webkit-keyframes text-focus-in {

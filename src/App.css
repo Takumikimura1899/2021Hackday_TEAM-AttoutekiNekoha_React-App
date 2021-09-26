@@ -1,44 +1,46 @@
 .disabled-link {
   pointer-events: none;
 }
-  .fixed{
-    display: flex;
-    justify-content: center;
-    margin:auto;
-    padding:0;
-  }
-.picture{
-  position:absolute;
+
+.fixed{
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  padding:0;
 }
   
-  .button{
-    width:15vw;
-    margin-top: 11px;
-    position: relative;
-  }
+.button{
+  width:15vw;
+  margin-top: 11px;
+  position: relative;
+}
 
- .input{
-    border-radius: 8px;
-    width:80%;
-  }
+.input{
+  border-radius: 8px;
+  width:80%;
+}
 
  .postBtn{
   width: 20%;
 }
+
 .field{
   width: 100%;
 }
-  .form-size{
-    max-width:700px;
-    height:60px;
-    padding: 20px;
-  }
+
+.form-size{
+  max-width:700px;
+  height:60px;
+  padding: 20px;
+}
+
 .footer{
   height: 100px;
   width: 100%;
   margin-top: 20px;
   box-sizing: border-box;
 }
+
 .center{
   padding-top:100px;
 

@@ -13,8 +13,6 @@ const PostComplain = () => {
     }
   }, []);
 
-  
-  
   const onChange = (e) => {
     setText(e.target.value);
   };

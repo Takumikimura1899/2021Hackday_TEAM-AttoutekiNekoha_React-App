@@ -41,7 +41,7 @@ const App = () => {
   console.log(localStorageContents.length);
 
   return (
-    <div className="App mx-6 ">
+    <div className="App">
       <section className="section top"></section>
       <section className="container picture">
         <PostComplain />
@@ -55,15 +55,16 @@ const App = () => {
               爆破
             </Link>
           </div>
-      </section>
-      <section className="section footer volum">
-        <div className="foot is-flex is-justify-content-center is-align-items-center">
-          <p className="foot-name is-size-7 has-text-weight-light">
-            © 2021 あなたの心に、チャッカマン。All Rights Reserved.
-          </p>
-        </div>
-      </section>
         </section>
+      </section>
+
+      <section className="section footer volum">
+      <div className="foot is-flex is-justify-content-center is-align-items-center">
+        <p className="foot-name is-size-7 has-text-weight-light">
+          © 2021 あなたの心に、チャッカマン。All Rights Reserved.
+        </p>
+      </div>
+    </section>
     </div>
   );
 };
