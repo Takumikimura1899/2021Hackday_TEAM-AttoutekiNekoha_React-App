@@ -1,40 +1,64 @@
-
 .disabled-link {
   pointer-events: none;
 }
-  .fixed{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin:auto;
-    padding:0;
-  }
-  
-  .button{
-    width:20vw;
-  }
 
- .input{
-    border-radius: 8px;
-    width:80%;
-  }
+.fixed{
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  padding:0;
+}
+  
+.button{
+  width:15vw;
+  margin-top: 11px;
+  position: relative;
+}
+
+.input{
+  border-radius: 8px;
+  width:80%;
+}
 
  .postBtn{
   width: 20%;
 }
+
 .field{
   width: 100%;
 }
-  .form-size{
-    max-width:700px;
-    height:60px;
-    padding: 20px;
-  }
-.footer{
-  max-height: 100px;
-  padding: 0;
+
+.form-size{
+  max-width:700px;
+  height:60px;
+  padding: 20px;
 }
+
+.footer{
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
 .center{
   padding-top:100px;
 
+}
+
+.foot-name{
+  position: relative;
+  top:-5px;
+}
+
+.App{
+  width:100vw;
+}
+
+.top{
+  padding:0;
+}
+
+.exprode{
+  border-radius: 7px;
 }

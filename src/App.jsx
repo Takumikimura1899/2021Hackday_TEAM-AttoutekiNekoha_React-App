@@ -12,7 +12,6 @@ const clear = () => {
 const App = () => {
   const [text, setText] = useState('');
   const [localStorageContents, setLocalStorageContents] = useState([]);
-  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     if (localStorage.getItem('contents')) {
@@ -24,7 +23,6 @@ const App = () => {
   const onChange = (e) => {
     setText(e.target.value);
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!text) return;
@@ -43,35 +41,30 @@ const App = () => {
   console.log(localStorageContents.length);
 
   return (
-    <div className="App mx-6 ">
-      <section className="section"></section>
+    <div className="App">
+      <section className="section top"></section>
       <section className="container picture">
         <PostComplain />
 
         <section className="fixed section">
-          <div className="columns is-flex is-flex-direction-column is-justify-content-center ">
+          <div className="buttons columns is-flex is-flex-direction-column is-justify-content-center ">
             <Link
               to="/explosion"
-              className="is-danger is-outlined column is-medium button"
+              className="has-text-weight-light exprode is-danger is-outlined column is-medium button"
             >
               爆破
             </Link>
-            <button
-              onClick={clear}
-              className="mt-2 clear button column is-medium is-primary is-outlined"
-            >
-              RESET
-            </button>
           </div>
         </section>
       </section>
-      <section className="section">
-        <div className="footer is-flex is-justify-content-center">
-          <p className="is-size-7 has-text-weight-light">
-            © 2021 あなたの心に、チャッカマン。All Rights Reserved.
-          </p>
-        </div>
-      </section>
+
+      <section className="section footer volum">
+      <div className="foot is-flex is-justify-content-center is-align-items-center">
+        <p className="foot-name is-size-7 has-text-weight-light">
+          © 2021 あなたの心に、チャッカマン。All Rights Reserved.
+        </p>
+      </div>
+    </section>
     </div>
   );
 };

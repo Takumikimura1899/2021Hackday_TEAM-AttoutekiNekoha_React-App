@@ -1,11 +1,25 @@
 .image{
-    min-height: 600px;
-    max-height: 1200px;
-    background-image: url('../../img/neko.png');
+    height: 600px;
+    background-image: url('../../img/neko2 (2).png');
     background-size: cover;
     background-repeat: no-repeat;
-    min-width:800px;
+    width: 950px;
     resize: horizontal;
+}
+.image0{
+  background-image: url('../../img/nekobom0.png');
+}
+
+.image1{
+  background-image: url('../../img/nekobom1.png');
+}
+
+.image2{
+  background-image: url('../../img/nekobom2.png');
+}
+
+.image3{
+  background-image: url('../../img/nekobom3.png');
 }
 
 .todos{
@@ -18,4 +32,9 @@
 
 .imagefix{
   margin: 0;
+}
+
+.postBtn{
+  margin-top: 0;
+  border-radius: 7px;
 }
